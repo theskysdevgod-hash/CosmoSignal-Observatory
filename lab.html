@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CosmoSignal - Science Lab</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a1f2e 0%, #16213e 50%, #0f3460 100%);
+            color: #e0f7f4;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(16, 52, 96, 0.7);
+            border-bottom: 3px solid #00d4ff;
+            padding: 20px;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #00d4ff;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+            letter-spacing: 2px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            color: #0a1f2e;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #00d4ff;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+            letter-spacing: 3px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #00bfb3;
+            margin-bottom: 50px;
+            opacity: 0.9;
+        }
+
+        .experiments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .experiment-card {
+            background: rgba(0, 52, 96, 0.6);
+            border: 2px solid #00d4ff;
+            border-radius: 10px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+
+        .experiment-card:hover {
+            border-color: #00bfb3;
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.4);
+            transform: translateY(-5px);
+        }
+
+        .experiment-card h2 {
+            color: #00d4ff;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .experiment-card p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #c0e7e5;
+        }
+
+        .experiment-btn {
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            color: #0a1f2e;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 1em;
+        }
+
+        .experiment-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(0, 212, 255, 0.5);
+        }
+
+        .info-section {
+            background: rgba(0, 52, 96, 0.5);
+            border-left: 5px solid #00d4ff;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        .info-section h3 {
+            color: #00d4ff;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .info-section p {
+            line-height: 1.8;
+            color: #c0e7e5;
+        }
+
+        .facts-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .facts-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #c0e7e5;
+            line-height: 1.6;
+        }
+
+        .facts-list li:before {
+            content: "⭐";
+            position: absolute;
+            left: 0;
+            color: #00d4ff;
+        }
+
+        footer {
+            background: rgba(16, 52, 96, 0.7);
+            border-top: 3px solid #00d4ff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+            color: #00bfb3;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .experiments-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">🔬 CosmoSignal LAB</div>
+            <div class="nav-buttons">
+                <a href="index.html" class="nav-btn">← Back to Observatory</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>COSMIC RESEARCH LAB</h1>
+        <p class="subtitle">Interactive Experiments & Educational Resources</p>
+
+        <div class="experiments-grid">
+            <div class="experiment-card">
+                <h2>🔭 Comet Chemistry Analyzer</h2>
+                <p>Explore the chemical composition of comets and learn about the molecules that make up these cosmic wanderers. Analyze spectral data from 3I/ATLAS and understand what creates those stunning tails.</p>
+                <button class="experiment-btn" onclick="window.open('https://www.khanacademy.org/science/chemistry', '_blank')">Launch Chemistry Module</button>
+            </div>
+
+            <div class="experiment-card">
+                <h2>🌌 Orbital Mechanics Simulator</h2>
+                <p>Simulate comet orbits and understand the gravitational forces that shape their paths through space. Calculate orbital parameters and predict comet trajectories.</p>
+                <button class="experiment-btn" onclick="window.open('https://www.khanacademy.org/science/physics', '_blank')">Open Physics Simulator</button>
+            </div>
+
+            <div class="experiment-card">
+                <h2>💫 Impact Probability Calculator</h2>
+                <p>Calculate the probability of comet impact with various celestial bodies. Learn about collision dynamics and planetary defense strategies.</p>
+                <button class="experiment-btn" onclick="window.open('https://www.nasa.gov/planetary-defense/', '_blank')">NASA Planetary Defense</button>
+            </div>
+
+            <div class="experiment-card">
+                <h2>🌈 Spectral Analysis Tool</h2>
+                <p>Examine the light spectrum emitted by comets. Understand how astronomers determine comet composition, temperature, and other properties from spectral data.</p>
+                <button class="experiment-btn" onclick="window.open('https://www.nasa.gov/missions/', '_blank')">View NASA Observations</button>
+            </div>
+
+            <div class="experiment-card">
+                <h2>📊 Comet Data Explorer</h2>
+                <p>Dive into real comet data from NASA and ESA databases. Compare different comets and discover patterns in their behaviors and characteristics.</p>
+                <button class="experiment-btn" onclick="window.open('https://ssd.jpl.nasa.gov/horizons/', '_blank')">NASA Horizons System</button>
+            </div>
+
+            <div class="experiment-card">
+                <h2>🚀 Mission Planning Lab</h2>
+                <p>Design hypothetical space missions to observe and study comets. Learn about spacecraft design, trajectory planning, and scientific instruments.</p>
+                <button class="experiment-btn" onclick="window.open('https://science.nasa.gov/mission/', '_blank')">Explore NASA Missions</button>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>📚 What is Comet 3I/ATLAS?</h3>
+            <p>3I/ATLAS is an interstellar comet discovered in 2017. It's only the second interstellar comet ever observed by humans, making it an extraordinary subject for scientific study. This comet originated from outside our solar system and provides valuable insights into the composition and behavior of comets from other star systems.</p>
+        </div>
+
+        <div class="info-section">
+            <h3>🔬 Key Research Areas</h3>
+            <ul class="facts-list">
+                <li>Spectroscopy - Analyzing light to determine chemical composition</li>
+                <li>Astrometry - Measuring precise positions and movements</li>
+                <li>Photometry - Measuring brightness and luminosity changes</li>
+                <li>Orbital Mechanics - Understanding gravitational influences</li>
+                <li>Comparative Cometology - Studying differences between comets</li>
+                <li>Interstellar Chemistry - Analyzing molecules from other star systems</li>
+            </ul>
+        </div>
+
+        <div class="info-section">
+            <h3>🎓 Learning Resources</h3>
+            <ul class="facts-list">
+                <li>Khan Academy offers comprehensive courses in Chemistry and Physics</li>
+                <li>NASA's official website provides detailed mission information</li>
+                <li>JPL Horizons System allows access to real astronomical data</li>
+                <li>ESA has extensive educational materials about comets</li>
+                <li>Space.com provides current astronomical news and observations</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 CosmoSignal Observatory | Cosmic Research Lab</p>
+        <p>Tracking Interstellar Comets | Educational Space Science Platform</p>
+    </footer>
+</body>
+</html>
