@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CosmoSignal: The Sci-Fi Comet Observatory</title>
+  <meta charset="UTF-8" />
+  <style>
+    body { background: #181a20; color: #FFF; font-family: 'Orbitron', Arial, sans-serif; margin:0; }
+    header, section, footer { padding: 30px; }
+    header { background: linear-gradient(90deg, #272a36, #181a20); border-bottom: 2px solid #00ffc6; }
+    h1, h2, h3 { letter-spacing: 2px; }
+    .gallery img { margin:8px; border-radius:16px; box-shadow:0 0 10px #00ffc6; }
+    .profiles { display: flex; gap: 40px; }
+    .profile { border: 2px solid #00ffc6; border-radius:16px; padding: 20px; background: #22232b; width:30%; }
+    section, footer { border-bottom:1px solid #272a36; }
+    .vr-button, .exp-button { padding:12px 24px; border-radius:8px; background: #00ffc6; color: #202020; border:none; cursor:pointer; }
+    .profiles h3 { color: #00ffd0; }
+    a { color:#00ffc6;}
+    footer {font-size:0.8em; opacity:0.7;}
+    .assistant-bar {position:fixed; right:0; top:30%; background:#32343d; color:#fff; padding: 18px 16px; border-radius: 16px 0 0 16px; box-shadow: 0 0 14px #00ffc6; width:220px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CosmoSignal</h1>
+    <h2>Your Portal to Interstellar Comets & Cosmic Stories</h2>
+    <p>Welcome, Watcher! Track the weirdest visitors from beyond our Solar System. Real interstellar comets like 3I/ATLAS and 'Oumuamua. Engage with science, fiction, and cosmic data.</p>
+  </header>
+
+  <section>
+    <h2>Live Comet Map: Track 3I/ATLAS Now</h2>
+    <iframe style="border-radius:16px;" src="https://theskylive.com/planetarium?obj=c2025n1" width="800" height="500"></iframe>
+    <p>See real-time positions and orbits for interstellar objects. Click, zoom, and hunt!</p>
+  </section>
+
+  <section>
+    <h2>Comet Profiles: Meet the Cosmic Nomads</h2>
+    <div class="profiles">
+      <div class="profile">
+        <h3>3I/ATLAS</h3>
+        <p><b>Origin:</b> Interstellar<br><b>Size:</b> Less than 1 km<br><b>Detected:</b> ATLAS Array, Chile, 2025<br><b>Powers:</b> Cyanide haze, rapid escape</p>
+      </div>
+      <div class="profile">
+        <h3>2I/Borisov</h3>
+        <p><b>Origin:</b> Far interstellar<br><b>Size:</b> 0.5 km<br><b>Detected:</b> Crimea, 2019<br><b>Speed:</b> Over 35 km/s!</p>
+      </div>
+      <div class="profile">
+        <h3>Oumuamua</h3>
+        <p><b>Origin:</b> Unexplained<br><b>Size:</b> 100 meters, cigar-shaped<br><b>Known:</b> First interstellar object<br><b>Mystery:</b> Tumbled oddly!</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Cosmic Gallery</h2>
+    <p>High-resolution NASA images of comets and space objects.</p>
+    <button class="vr-button">View NASA Gallery</button>
+  </section>
+
+  <section>
+    <h2>Science Lab & Experiments</h2>
+    <p>Try simulations and learn comet chemistry online.</p>
+    <button class="exp-button">Start Cosmic Lab</button>
+  </section>
+
+  <section>
+    <h2>Fiction & Facts</h2>
+    <p>Read wild stories and the latest comet discoveries.<br><a href="#">Submit your sci-fi comet story!</a></p>
+  </section>
+
+  <section>
+    <h2>Join the Watchers!</h2>
+    <form>
+      <input type="email" placeholder="Your email for cosmic alerts" style="padding:10px; border-radius:8px;">
+      <button type="submit" style="padding:12px 24px; border-radius:8px; background:#00ffc6; color:#202020; border:none;">Join</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>CosmoSignal 2025. Track comets. Explore cosmos. Join the adventure.</p>
+  </footer>
+
+  <aside class="assistant-bar">
+    <b>CosmoSignal AI</b><br>Ask about any comet<br><i>Where is 3I/ATLAS?</i><br><i>Was Oumuamua artificial?</i>
+  </aside>
+</body>
+</html>
